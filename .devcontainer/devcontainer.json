@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/python-3
+{
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-toolsai.jupyter",
+		"pkief.material-icon-theme",
+		"ms-python.vscode-pylance",
+		"ms-python.python",
+		"njpwerner.autodocstring",
+		"donjayamanne.python-environment-manager",
+		"kevinrose.vsc-python-indent",
+		"visualstudioexptteam.vscodeintellicode",
+		"tht13.python"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000],
+
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=default",
+	"workspaceFolder": "/workspace",
+	
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "/workspace/.devcontainer/setup.sh",
+	// "containerEnv": {"GOOGLE_APPLICATION_CREDENTIALS" : "/workspace/.devcontainer/queenit-recsys.json",
+	// 				 "CUSTOM_PYTHON_LIBRARY_PATH" : "/workspace"}
+}
